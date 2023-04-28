@@ -48,22 +48,24 @@ $con = $conexion->getConexion();
 </header>
   <h1> Todos los productos para el bienestar de tu mascota </h1>
 
-<div class= catalogo>
-  <div class="row"></div>
-  <?php
-  $consultaArticulos = "SELECT * FROM articulos";
-  $resultadoArticulos = $con->query($consultaArticulos);
-  while ($row = $resultadoArticulos->fetch_array()) { 
-    echo '<div class="card" style="width: 18rem;">
-            <img src="'.$row['ruta_img'].'" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">'.$row['código'].' </h5>
-                <p class="card-text">'.$row['descripcion'].'</p>
-                <a href="#" class="btn btn-primary">'.$row['precio'].'</a>
-              </div>
-          </div>';}?>
-    </div>
-  </div> 
+  <div class="catalogo">
+  <div class="row">
+    <?php
+    $consultaArticulos = "SELECT * FROM articulos";
+    $resultadoArticulos = $con->query($consultaArticulos);
+    while ($row = $resultadoArticulos->fetch_array()) { 
+      echo '<div class="card" style="width: 18rem;">
+              <img src="'.$row['ruta_img'].'" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">'.$row['código'].' </h5>
+                  <p class="card-text">'.$row['descripcion'].'</p>
+                  <a href="#" class="btn btn-primary">'.$row['precio'].' € </a>
+                </div>
+            </div>';
+    }
+    ?>
+  </div>
+</div>
 
 <?php require('footer.php'); ?>
 <script src="../controller/carrito.js"></script>

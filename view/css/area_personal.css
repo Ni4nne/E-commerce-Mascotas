@@ -6,7 +6,8 @@
   align-items: center;
 }
 
-.saludo {margin-top: 10px;
+.saludo {
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -14,4 +15,5 @@
 .formulario {
     margin: 10px 10px 10px 10px;
 }
+
 
