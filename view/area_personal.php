@@ -57,9 +57,9 @@ $con = $conexion->getConexion();
       echo '<div class="card" style="width: 18rem;">
               <img src="'.$row['ruta_img'].'" class="card-img-top">
                 <div class="card-body">
-                  <h5 class="card-title">'.$row['código'].' </h5>
-                  <p class="card-text">'.$row['descripcion'].'</p>
-                  <a href="#" class="btn btn-primary">'.$row['precio'].' € </a>
+                <p class="card-text">'.$row['descripcion'].'</p>
+                <p class="card-text">Precio '.$row['precio'].' € </p>
+                  <a href="#" class="btn btn-primary"> Añadir </a>
                 </div>
             </div>';
     }
