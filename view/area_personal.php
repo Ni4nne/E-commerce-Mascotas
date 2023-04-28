@@ -49,6 +49,7 @@ $con = $conexion->getConexion();
   <h1> Todos los productos para el bienestar de tu mascota </h1>
 
 <div class= catalogo>
+  <div class="row"></div>
   <?php
   $consultaArticulos = "SELECT * FROM articulos";
   $resultadoArticulos = $con->query($consultaArticulos);
@@ -61,7 +62,8 @@ $con = $conexion->getConexion();
                 <a href="#" class="btn btn-primary">'.$row['precio'].'</a>
               </div>
           </div>';}?>
-           
+    </div>
+  </div> 
 
 <?php require('footer.php'); ?>
 <script src="../controller/carrito.js"></script>
