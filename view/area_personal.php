@@ -33,22 +33,25 @@ $con = $conexion->getConexion();
     <div class="saludo">
       <p> Bienvenido! </p>
     </div>
-
     <div class="formulario">
       <form action="logout.php" method="post">
         <input type="submit" value="Cerrar sesión">
       </form>
     </div>
-
     <div class="carrito">
-    <button class="cart-btn" id="carrito"><i class="fas fa-shopping-cart"></i> Carrito</button>
+      <button class="cart-btn" id="carrito"><i class="fas fa-shopping-cart"></i> Carrito</button>
     </div>
-
 </div>
 </header>
-  <h1> Todos los productos para el bienestar de tu mascota </h1>
 
+<main>
   <div class="catalogo">
+    <div class="buscar">
+      <form>
+        <input type="text" name="search" placeholder="Buscar artículos...">
+        <input type="submit" value="Buscar">
+      </form>
+    </div>
   <div class="row">
     <?php
     $consultaArticulos = "SELECT * FROM articulos";
@@ -66,6 +69,7 @@ $con = $conexion->getConexion();
     ?>
   </div>
 </div>
+</main>
 
 <?php require('footer.php'); ?>
 <script src="../controller/carrito.js"></script>
