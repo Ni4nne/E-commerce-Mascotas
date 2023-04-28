@@ -52,320 +52,33 @@ $con = $conexion->getConexion();
         <input type="submit" value="Buscar">
       </form>
     </div>
-  <div class="row">
-
   </div>
-</div>
 </main>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo1.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 1</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
- 
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo2.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 2</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo3.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 3</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
+<form action="ver_carrito.php" method="POST">
+  <div class="row">
+    <?php
+      $consultaArticulos = "SELECT * FROM articulos";
+      $resultadoArticulos = $con->query($consultaArticulos);
+      while ($row = $resultadoArticulos->fetch_array()) { 
+        echo '<div class="card" style="width: 15rem;">
+                <img src="'.$row['ruta_img'].'" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text" style="font-size: 12px;">Código Artículo: '.$row['codigo'].'</p>
+                  <p class="card-text">Descripción: '.$row['descripcion'].'</p>
+                  <p class="card-text">Precio: '.$row['precio'].' € </p>
+                  <input type="hidden" name="codigo[]" value="'.$row['codigo'].'">
+                  <input type="hidden" name="descripcion[]" value="'.$row['descripcion'].'">
+                  <input type="hidden" name="precio[]" value="'.$row['precio'].'">
+                  <button type="button" class="btn btn-primary" onclick="añadirArticulo(\''.$row['codigo'].'\', \''.$row['descripcion'].'\', \''.$row['precio'].'\')"
+                  > Añadir </button>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </div>';
+      }?>
+  </div>
+  <button type="submit" class="btn btn-success">Enviar</button>
+</form>
 
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo4.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 4</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo5.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 5</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo6.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 6</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo7.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 7</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo8.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 8</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo9.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 9</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo10.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 10</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo11.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 11</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo12.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 12</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo13.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 13</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo14.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 14</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo15.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 15</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo16.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 16</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo17.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 17</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo18.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 18</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo19.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 19</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="./images/catalogo/articulo20.jpg" width="100" height="100">
-            <div class="card-body">
-              <p class="card-text" style="font-size: 12px;">Referencia Artículo: 20</p>
-              <p class="card-text">Descripcion: Pienso para perros raza pequeña.</p>
-              <p class="card-text">Precio: 12.00 €</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Añadir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-</main>
 
 
 <footer>
@@ -412,7 +125,6 @@ $con = $conexion->getConexion();
   <div class="copyright">
     <p> Copyright © 2023 Todo +cotas. Todos los derechos reservados </p>
   </div>
-
 </footer>
 <script src="../controller/carrito.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

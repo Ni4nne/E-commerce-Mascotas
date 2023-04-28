@@ -1,5 +1,15 @@
 @import url('header.css');
 
+body, html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+}
+
 .opcUsuario {
   display: flex;
   flex-direction: column;
@@ -25,8 +35,15 @@
   margin: 30px 30px 30px 30px;
 }
 
+.card-img-top {
+  width: 200px;
+}
+
+
+
+
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
