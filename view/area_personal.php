@@ -60,11 +60,12 @@ $con = $conexion->getConexion();
       echo '<div class="card" style="width: 18rem;">
               <img src="'.$row['ruta_img'].'" class="card-img-top">
                 <div class="card-body">
-                <p class="card-text">'.$row['descripcion'].'</p>
-                <p class="card-text">Precio '.$row['precio'].' € </p>
-                  <a href="#" class="btn btn-primary"> Añadir </a>
-                </div>
-            </div>';
+                <p class="card-text" style="font-size: 12px;">Código Artículo: '.$row['codigo'].'</p>
+                <p class="card-text">Descripción: '.$row['descripcion'].'</p>
+                <p class="card-text">Precio: '.$row['precio'].' € </p>
+                <a href="#" class="btn btn-primary"> Añadir </a>
+              </div>
+          </div>';
     }
     ?>
   </div>
