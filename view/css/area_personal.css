@@ -25,3 +25,39 @@
   margin: 30px 30px 30px 30px;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+}
+
+img {
+  margin: 5px;
+}
+
+.secciones {
+  background-color: rgb(203, 221, 209);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+.secciones div {
+  display: flex;
+  flex-direction: column;
+}
+
+.secciones h6 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #004d47;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 5px;
+}

@@ -5,15 +5,31 @@ SessionManager::initSession();
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesta</title>
-</head>
-<body>
-    <h1> Has comprado los siguientes productos: </h1>
+<?php
+// Recibir los datos que se enviaron desde index.php
+$codigo = $_POST['codigo'];
+$descripcion = $_POST['descripcion'];
+
+// Añadir los datos al array de productos en la sesión
+if (!isset($_SESSION['productos'])) {
+  $_SESSION['productos'] = array();
+}
+array_push($_SESSION['productos'], array('codigo' => $codigo, 'descripcion' => $descripcion));
+
+// Mostrar los productos que se han añadido al carrito
+echo "<h1>Productos en el carrito:</h1>";
+if (isset($_SESSION['productos'])) {
+  foreach ($_SESSION['productos'] as $producto) {
+    echo "<p>Código: " . $producto['codigo'] . ", Descripción: " . $producto['descripcion'] . "</p>";
+  }
+} else {
+  echo "<p>No hay productos en el carrito.</p>";
+}
+?>
+
+
+
+
+    
 </body>
 </html>
