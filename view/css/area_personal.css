@@ -1,0 +1,17 @@
+@import url('header.css');
+
+.opcUsuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.saludo {margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.formulario {
+    margin: 10px 10px 10px 10px;
+}
+

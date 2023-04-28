@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Establece estilos para el encabezado*/
+header {
+    background-color: rgb(203, 221, 209);
+    display: flex;
+    justify-content: center;
+}
+
+/*Establece estilos para la imagen*/
+header img {
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.boton {
+    background-color:rgb(143, 211, 173); ;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 0px 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.boton:hover {
+    background-color: rgb(117, 185, 141);
+}

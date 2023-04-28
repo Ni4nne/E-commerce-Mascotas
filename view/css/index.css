@@ -1,0 +1,14 @@
+@import url("./header.css");
+
+.index {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
