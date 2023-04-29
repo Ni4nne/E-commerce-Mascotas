@@ -14,16 +14,12 @@
     ?>
     <h1> Todos los productos para el bienestar de tu mascota </h1>
 
-    <img src="./images/mascotas-pets.jpg" alt="logo mascotas" class="index">
-
+    <div class="contenedor">
+        <img src="./images/mascotas-pets.jpg" alt="logo mascotas" class="index">
+    </div>
 
 
     
-
-    <?php
-    require('footer.php');
-    ?>
-
 
 </body>
 

@@ -1,6 +1,6 @@
 <?php
 //Se incluye el archivo con la clase sesionManager
-include('../controller/session_manager.php');
+require_once('../controller/session_manager.php');
 SessionManager::initSession();
 
 //Se cierra la sesión
@@ -21,9 +21,9 @@ SessionManager::closeSession();
     
     <h1> Esperamos volver a verte muy pronto! </h1>
     
-
-    <img src="./images/mascotas-pets.jpg" alt="Logo" class="index">
-
+    <div class="contenedor">
+        <img src="./images/mascotas-pets.jpg" alt="Logo" class="index">
+    </div>
 
 
     

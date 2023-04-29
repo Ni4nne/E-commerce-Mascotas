@@ -18,7 +18,7 @@
     <h1>Accede a tu cuenta</h1>
   </nav>
   <div class="cont">
-    <form action="../controller/login_validation.php" method="post">
+    <form action="../model/login_validation.php" method="post">
       <div>  
         <label for="email">Email:</label>
         <input type="email" name="email" required>

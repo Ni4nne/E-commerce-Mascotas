@@ -19,7 +19,7 @@
     
   </nav>
   <div class="cont">
-    <form action="../controller/signup_validation.php" method="post">
+    <form action="../model/signup_validation.php" method="post">
       <div>
         <label for="nombre">Nombre:</label>
         <input type="texto" name="nombre" id="nombre" required>
