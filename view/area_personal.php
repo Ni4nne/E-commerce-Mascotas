@@ -27,18 +27,18 @@ $con = $conexion->getConexion();
           <img src="./images/logos/Logo.png" alt="Logo" class="d-inline-block align-text-center"> Productos y Servicios de calidad para tu mejor amigo </a>
     </nav>
 
-<div class="opcUsuario">
-    <div class="saludo">
-      <p> Bienvenido! </p>
-    </div>
-    <div class="formulario">
-      <form action="logout.php" method="post">
-        <input type="submit" value="Cerrar sesión">
-      </form>
-    </div>
-    <div class="carrito">
-      <button class="cart-btn" id="carrito"><i class="fas fa-shopping-cart"></i> Carrito</button>
-    </div>
+    <div class="opcUsuario">
+      <div class="saludo">
+        <p> Bienvenido! </p>
+      </div>
+        <div class="formulario">
+          <form action="logout.php" method="post">
+            <input type="submit" value="Cerrar sesión">
+          </form>
+        </div>
+            <div class="carrito">
+              <button class="cart-btn" id="carrito"><i class="fas fa-shopping-cart"></i> Carrito</button>
+            </div>
 </div>
 </header>
 
@@ -74,7 +74,7 @@ $con = $conexion->getConexion();
               </div>';
       }?>
   </div>
-  <button type="submit" class="btn btn-success">Enviar</button>
+
 </form>
 
 
