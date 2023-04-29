@@ -36,8 +36,8 @@ $con = $conexion->getConexion();
             <input type="submit" value="Cerrar sesión">
           </form>
         </div>
-            <div class="carrito">
-              <button class="cart-btn" id="carrito"><i class="fas fa-shopping-cart"></i> Carrito</button>
+            <div class="alert alert-success">
+              <a href="#" class="badge badge-success"> Ver carrito</a>
             </div>
 </div>
 </header>
@@ -65,11 +65,7 @@ $con = $conexion->getConexion();
                   <p class="card-text" style="font-size: 12px;">Código Artículo: '.$row['codigo'].'</p>
                   <p class="card-text">Descripción: '.$row['descripcion'].'</p>
                   <p class="card-text">Precio: '.$row['precio'].' € </p>
-                  <input type="hidden" name="codigo[]" value="'.$row['codigo'].'">
-                  <input type="hidden" name="descripcion[]" value="'.$row['descripcion'].'">
-                  <input type="hidden" name="precio[]" value="'.$row['precio'].'">
-                  <button type="button" class="btn btn-primary" onclick="añadirArticulo(\''.$row['codigo'].'\', \''.$row['descripcion'].'\', \''.$row['precio'].'\')"
-                  > Añadir </button>
+                  <button type="button" class="btn btn-primary" type="submit"> Añadir </button>
                 </div>
               </div>';
       }?>
