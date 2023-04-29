@@ -1,7 +1,7 @@
 <?php
 
 //Se incluye la conexión a la base de datos
-require_once('../model/conection.php');
+require_once('conection.php');
 
 class user_validation {
     public function validarUsuario($email, $password) {

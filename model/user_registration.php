@@ -1,5 +1,5 @@
 <?php
-require_once('../model/conection.php');
+require_once('conection.php');
 
 class user_registration {
     public function registrarUsuario($nombre, $apellido, $email, $password) {

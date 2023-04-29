@@ -1,10 +1,8 @@
 <?php
 //Se incluye el archivo con la clase sesionManager
 require_once('../controller/session_manager.php');
-SessionManager::initSession();
-
-//Se incluye la conexión a la base de datos
 require_once('../model/conection.php');
+SessionManager::initSession();
 $conexion = new Conexion();
 $con = $conexion->getConexion();
 ?>

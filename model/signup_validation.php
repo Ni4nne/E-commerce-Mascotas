@@ -1,9 +1,9 @@
 <html>
 <?php 
 //Se incluyen los archivos para manejar sesion, validar y registrar usuario
-require_once('./session_manager.php');
-include('./user_validation.php');
-include('./user_registration.php');
+require_once('../controller/session_manager.php');
+include('user_validation.php');
+include('user_registration.php');
 
 //Se instancian las clases
 SessionManager::initSession();
