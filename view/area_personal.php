@@ -27,31 +27,23 @@ $con = $conexion->getConexion();
           <img src="./images/logos/Logo.png" alt="Logo" class="d-inline-block align-text-center"> Productos y Servicios de calidad para tu mejor amigo </a>
     </nav>
 
-    <div class="opcUsuario">
-      <div class="saludo">
-        <p> Bienvenido! </p>
-      </div>
-        <div class="formulario">
-          <form action="logout.php" method="post">
-            <input type="submit" value="Cerrar sesión">
-          </form>
-        </div>
-            <div class="alert alert-success">
-              <a href="#" class="badge badge-success"> Ver carrito</a>
-            </div>
-</div>
-</header>
+<div class="opcUsuario">
+    <div class="saludo">
+      <p> Bienvenido! </p>
+    </div>
 
-<main>
-  <div class="catalogo">
-    <div class="buscar">
-      <form>
-        <input type="text" name="search" placeholder="Buscar artículos...">
-        <input type="submit" value="Buscar">
+    <div class="formulario">
+      <form action="logout.php" method="post">
+        <input type="submit" value="Cerrar sesión">
       </form>
     </div>
-  </div>
-</main>
+
+    <div class="carrito">
+    <button class="cart-btn" id="carrito"><i class="fas fa-shopping-cart"></i> Carrito</button>
+    </div>
+
+</div>
+</header>
 
 <form action="ver_carrito.php" method="POST">
   <div class="row">
@@ -69,13 +61,9 @@ $con = $conexion->getConexion();
                 </div>
               </div>';
       }?>
-  </div>
+           
 
-</form>
-
-
-
-<footer>
+           <footer>
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
