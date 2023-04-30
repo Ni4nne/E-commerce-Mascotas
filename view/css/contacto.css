@@ -1,0 +1,13 @@
+header {
+    background-color: rgb(203, 221, 209);
+    display: flex;
+    justify-content: center;
+}
+
+/*Establece estilos para la imagen*/
+header img {
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    display: flex;
+}

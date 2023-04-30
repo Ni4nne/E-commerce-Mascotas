@@ -15,7 +15,7 @@
     <img src="./images/logos/Logo.png" alt="logo" />
   </div>
   <nav>
-    <h1>Regístrate</h1>
+  <h1 class="h3 mb-3 fw-normal">Regístrate: </h1>
     
   </nav>
   <div class="cont">

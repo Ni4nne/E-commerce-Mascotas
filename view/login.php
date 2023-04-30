@@ -14,9 +14,11 @@
   <div class="container">
     <img src="./images/logos/Logo.png" alt="logo" />
   </div>
+  
   <nav>
-    <h1>Accede a tu cuenta</h1>
+    <h1 class="h3 mb-3 fw-normal"> Accede a tu cuenta: </h1>
   </nav>
+
   <div class="cont">
     <form action="../model/login_validation.php" method="post">
       <div>  
