@@ -14,33 +14,36 @@
   <div class="container">
     <img src="./images/logos/Logo.png" alt="logo" />
   </div>
+
   <nav>
   <h1 class="h3 mb-3 fw-normal">Regístrate: </h1>
-    
   </nav>
+
   <div class="cont">
     <form action="../model/signup_validation.php" method="post">
-      <div>
+    <div class="form-element"> 
         <label for="nombre">Nombre:</label>
-        <input type="texto" name="nombre" id="nombre" required>
+        <input type="texto" name="nombre" id="nombre" placeholder="nombre" required>
       </div>
 
-      <div>
+      <div class="form-element"> 
         <label for="apellido">Apellido:</label>
-        <input type="texto" name="apellido" id="apellido" required>
+        <input type="texto" name="apellido" id="apellido" placeholder="apellido" required>
       </div>
 
-      <div>
+      <div class="form-element"> 
         <label for="email">Email:</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
       </div>
       
-      <div>
+      <div class="form-element"> 
         <label for="password">Contraseña:</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" placeholder="contraseña" required>
       </div>
-      
-        <input type="submit" value="Enviar">
+      <div class="form-button">
+      <input type="submit" value="Enviar">
+      </div>
+
     </form>
   </div>
 

@@ -12,10 +12,11 @@
 <body>
 <?php require('header1.php');?>
 <div class="container"> 
-    <div class="row"> 
+    <div class="cont"> 
         <div class="col-md-12"> 
             <div class="well well-sm"> 
-                <form class="form-horizontal" action="../model/contact_manager.php" method= "post"> 
+                <form class="form-horizontal" action="../model/contact_manager.php" method= "post">
+                    <br> <br>
                         <legend class="text-center header">Contáctanos: </legend> 
                         <div class="form-group"> 
                             <span class="col-md-1 col-md-offset- 2 text-center"><i class="fa fa-user bigicon"></i></span> 
@@ -36,8 +37,9 @@
                                 <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Ingrese aquí su mensaje.". filas="7"></textarea> 
                             </div> 
                         </div> 
-
+                        <div class="form-button">
                         <input type="submit" value="Enviar">
+                        </div>
                 </form>
 <br><br>
             </div> 

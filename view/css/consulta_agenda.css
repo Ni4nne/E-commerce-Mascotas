@@ -1,0 +1,33 @@
+@import url(footer.css);
+
+table {
+display: flex;
+font-size: 15px;
+margin: 0 auto;
+text-align: center;
+border-collapse: collapse; 
+}
+
+th {
+font-size: 17px;
+font-weight: bold;
+padding: 8px;
+background: rgb(122, 180, 147); 
+border-top: 4px solid #aabcfe;
+border-bottom: 1px solid #fff;
+}
+
+td {
+padding: 8px;
+background: rgb(181, 225, 200); 
+border-bottom: 1px solid #fff;
+border-top: 1px solid transparent; }
+
+tr:hover td {
+background: #b4bbd7;
+color: rgb(44, 44, 59); }
+
+.pie {
+  width: 100%;
+}
+

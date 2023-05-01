@@ -20,4 +20,5 @@ if ($resultado) {
 } else {
   echo "Se ha producido un error durante el envío. ";
 }
+
 ?>

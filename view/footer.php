@@ -27,6 +27,7 @@
     <div>
       <h6> Servicios </h6>
       <a href="./veterinario.php" target="_blank"> Veterinario </a>
+      <a href="./mostrar_agenda.php" target="_blank"> Agenda Visitas </a>
     </div>
     <div>
       <h6> Soporte </h6>

@@ -1,0 +1,35 @@
+@import url('header.css');
+@import url('footer.css');
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.contenedor {
+    background-color: rgb(250, 247, 244);
+    width:100%;
+    padding: 30px 30px 0 30px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, lfr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+    "header header header"
+    "section section derecha";
+    text-align: justify;
+}
+
+.imgmvv {
+height: 150px;
+width: 150px;
+padding: 15px 20px 15px 15px;
+}
+
+.contimg {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+

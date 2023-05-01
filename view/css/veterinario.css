@@ -1,0 +1,19 @@
+@import url(header.css);
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+textarea {
+    height: 200px!important;
+}
+
+.pie {
+  width: 100%;
+}

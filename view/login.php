@@ -21,17 +21,19 @@
 
   <div class="cont">
     <form action="../model/login_validation.php" method="post">
-      <div>  
+      <div class="form-element"> 
         <label for="email">Email:</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
       </div>
       
-      <div>
+      <div class="form-element"> 
         <label for="password">Contraseña:</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" placeholder="contraseña" required>
       </div>
-      
+      <div class="form-button">
       <input type="submit" value="Acceder">
+      </div>
+
     </form>
   </div>
 

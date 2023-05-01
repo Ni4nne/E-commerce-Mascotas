@@ -1,13 +1,37 @@
+@import url("./footer.css");
+
 header {
     background-color: rgb(203, 221, 209);
     display: flex;
     justify-content: center;
 }
 
-/*Establece estilos para la imagen*/
+.container {
+    text-align: center;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header img {
     height: 150px;
     width: 150px;
     margin-left: 20px;
     display: flex;
 }
+
+form {
+    margin: 0 auto;
+    max-width: 600px; 
+  }
+
+  .form-button {
+    text-align: center;
+  }
+    
+  input[type="submit"]:hover {
+      background-color: rgb(117, 185, 141);
+    }
